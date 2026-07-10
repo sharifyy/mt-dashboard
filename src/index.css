@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+
+  /* Base surfaces */
+  --color-ink-950: #0b1220;
+  --color-ink-900: #101828;
+  --color-ink-800: #16213a;
+  --color-ink-700: #1e2c4a;
+  --color-ink-600: #2a3b5e;
+
+  /* Teal accent — primary interactive color */
+  --color-teal-500: #14b8a6;
+  --color-teal-400: #2dd4bf;
+  --color-teal-300: #5eead4;
+
+  /* Amber — status / alerts */
+  --color-amber-500: #f59e0b;
+  --color-amber-400: #fbbf24;
+
+  /* Neutral surface for content area (light) */
+  --color-mist-50: #f6f8fb;
+  --color-mist-100: #eef1f7;
+  --color-mist-200: #e2e6f0;
+
+  --radius-2xl: 1.1rem;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-mist-50);
+  color: var(--color-ink-900);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Persian numerals look better slightly tabular in tables */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background-color: var(--color-teal-300);
+  color: var(--color-ink-950);
+}
+
+/* subtle scrollbar for the sidebar / content */
+.scroll-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+}
